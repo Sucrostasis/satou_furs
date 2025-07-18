@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FURS 兽研会 - 兽迷文化交流平台</title>
+    <title>加入我们！</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="../style/index.css">
+    <style>
+    #bili-radio {
+        width: 50%;
+        height: 50%;
+    }
+    </style>
+
 </head>
 <body>
     <div class="nav-placeholder"></div>
@@ -62,11 +69,14 @@
         </div>
     </nav>
     <section class="hero">
-        <h1 class="FirstTitle">欢迎来到 FURS 兽研会</h1>
-        <p class="subtitle">汇聚创意、分享热爱、连接同好</p>
+        <h1 class="FirstTitle"class="FirstTitle">欢迎！</h1>
+        <iframe id="bili-radio"
+            src="https://player.bilibili.com/player.html?isOutside=true&aid=112842145532677&bvid=BV14feDeNEBb&cid=500001626223483&p=1"
+            scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> 
+        </iframe>
+
         <div class="hero-buttons">
-            <a href="pages/join.html" target="_blank" class="cta-button">立即加入</a>
-            <a href="#explore" class="cta-button secondary-button">探索更多</a>
+            <a href="#qq群 " class="cta-button">加入群聊</a>
         </div>
     </section>
     <footer class="CopyRight">
@@ -106,5 +116,9 @@
         <p class="CopyRightInfor">&copy; 2025 FURS兽研会. 保留所有权利. | 兽迷文化，创意无限</p>
     </footer>
     <script src="./src/index.js"></script>
+    <script>
+    document.getElementById("bili-radio").style.height = document.getElementById("bili-radio").scrollWidth * 0.76 + "px";
+    </script>
+
 </body>
 </html>
