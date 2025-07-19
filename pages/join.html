@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 加入我们 - FURS 兽研会</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style/index.css">
+    <style>
+    #bili-radio {
+        width: 50%;
+        height: 50%;
+    }
+    </style>
+
+</head>
+<body>
+    <div class="nav-placeholder"></div>
+    <nav class="FursNav">
+        <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="logo">
+            <div class="logo-text">FURS 兽研会</div>
+        </div>
+        <div class="left"></div>
+        <div class="NavLinks">
+			<a href="../index.html" class="nav-link">首页</a>
+            <a href="#forum" class="nav-link">福瑞论坛</a>
+            <a href="#meetup" class="nav-link">线下兽聚</a>
+            <a href="#news" class="nav-link">最新新闻</a>
+            <a href="#intro" class="nav-link">关于FURS</a>
+            <a href="#works" class="nav-link">FURS作品</a>
+        </div>
+        <div class="user-avatar-container">
+            <a href="#user" class="user-avatar">
+                <i class="fas fa-user"></i>
+            </a>
+            <div class="user-card">
+                <div class="user-header">
+                    <div class="user-avatar-lg">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-info">
+                        <h3>用户#0001</h3>
+                        <p>暂无简介</p>
+                    </div>
+                </div>
+                <div class="user-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">NAN</div>
+                        <div class="stat-label">作品</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">NAN</div>
+                        <div class="stat-label">粉丝</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">NAN</div>
+                        <div class="stat-label">关注</div>
+                    </div>
+                </div>
+                <div class="user-actions">
+                    <a href="#profile" class="user-btn">个人中心</a>
+                    <a href="#settings" class="user-btn secondary">设置</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <h1 class="FirstTitle"> 欢迎加入FURS！</h1>
+        <iframe id="bili-radio"
+            src="https://player.bilibili.com/player.html?isOutside=true&aid=112842145532677&bvid=BV14feDeNEBb&cid=500001626223483&p=1"
+            scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> 
+        </iframe>
+
+        <div class="hero-buttons">
+            <a href="#qq群 " class="cta-button">加入群聊</a>
+        </div>
+    </section>
+    <footer class="CopyRight">
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="logo-text">FURS 兽研会</div>
+                <p>致力于打造中国最具活力的兽迷文化社区，推动原创兽文化发展。</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-qq"></i></a>
+                    <a href="#"><i class="fab fa-bilibili"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>关于我们</h4>
+                    <a href="#about" class="footer-link">关于FURS</a>
+                    <a href="#team" class="footer-link">团队介绍</a>
+                    <a href="#history" class="footer-link">发展历程</a>
+                    <a href="#values" class="footer-link">核心价值观</a>
+                </div>
+                <div class="link-group">
+                    <h4>社区资源</h4>
+                    <a href="#forum" class="footer-link">福瑞论坛</a>
+                    <a href="#gallery" class="footer-link">作品展示</a>
+                    <a href="#tutorials" class="footer-link">创作教程</a>
+                    <a href="#resources" class="footer-link">素材资源</a>
+                </div>
+                <div class="link-group">
+                    <h4>支持帮助</h4>
+                    <a href="#contact" class="footer-link">联系我们</a>
+                    <a href="#faq" class="footer-link">常见问题</a>
+                    <a href="#support" class="footer-link">技术支持</a>
+                    <a href="#feedback" class="footer-link">意见反馈</a>
+                </div>
+            </div>  
+        </div>    
+        <p class="CopyRightInfor">&copy; 2025 FURS兽研会. 保留所有权利. | 兽迷文化，创意无限</p>
+    </footer>
+    <script src="../src/index.js"></script>
+    <script>
+    document.getElementById("bili-radio").style.height = document.getElementById("bili-radio").scrollWidth * 0.76 + "px";
+    </script>
+
+</body>
+</html>
