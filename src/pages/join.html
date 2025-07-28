@@ -34,16 +34,19 @@
         </div>
 
     </nav>
-    <section class="hero">
-        <h1 class="FirstTitle"> 欢迎加入FURS！</h1>
-        <video controls width="800" height="450" poster="../assets/FURS.jpg">
-            <source src="../assets/FURS_VIDEO.mp4" type="video/mp4">
-            您的浏览器不支持视频播放
-        </video>
-        <div class="hero-buttons">
-            <a href="#qq" class="cta-button">加入群聊</a>
-        </div>
-    </section>
+    <style>
+        #bili-radio {
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+        <iframe id="bili-radio"
+            src="https://player.bilibili.com/player.html?isOutside=true&aid=112842145532677&bvid=BV14feDeNEBb&cid=500001626223483&p=1"
+            scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
+        </iframe>
+    <script>
+        document.getElementById("bili-radio").style.height = document.getElementById("bili-radio").scrollWidth * 0.76 + "px";
+    </script>
     <footer class="CopyRight">
         <div class="footer-content">
             <div class="footer-info">
