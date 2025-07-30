@@ -19,7 +19,6 @@ fetch('https://api.furrycons.cn/event/recent') // 替换为你要请求的 API �
     // }
     // else{
 
-    
     const FurMeet1Name = document.getElementById('FurMeet1Name');
         FurMeet1Name.textContent = meetData.data[0].name;
     const FurMeet1Cover = document.getElementById('FurMeet1Cover');

@@ -280,3 +280,36 @@
     width: 100%;
     max-width: 350px;
 }
+
+.loading-state {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading-state::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    background-size: 200% 100%;
+    animation: loadingShimmer 1.5s infinite;
+    z-index: 10;
+}
+
+@keyframes loadingShimmer {
+    0% {
+        background-position: -100% 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+#furMeetErrorContainer {
+    font-family: system-ui, sans-serif;
+    font-weight: 500;
+}
