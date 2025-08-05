@@ -96,6 +96,25 @@ function initializeMeetContainers() {
 
 const meetContainers = initializeMeetContainers();
 
+function cleanDescriptionText(text) {
+    if (!text) return '';
+
+    // 首先处理粗体标记：将 **text** 替换为 <strong>text</strong>
+    let cleaned = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+    // 去除中括号标记（【】和[]）
+    cleaned = cleaned.replace(/【[^】]*】/g, '')
+        .replace(/\[[^\]]*\]/g, '');
+
+    // 将连续多个换行符缩减为一个换行符
+    cleaned = cleaned.replace(/\n{2,}/g, '\n');
+
+    // 将单个换行符替换为 <br> 标签
+    cleaned = cleaned.replace(/\n/g, '<br>');
+
+    return cleaned.trim();
+}
+
 // 卡片管理模块
 const cardManager = {
     /** 填充单个活动卡片 */
@@ -108,9 +127,14 @@ const cardManager = {
         // 文本内容设置
         if (name) name.textContent = meetData.name || defaults.name;
         if (city) city.textContent = meetData.city || defaults.city;
-        if (detail) detail.textContent = meetData.detail || defaults.detail;
         if (startDate) {
             startDate.textContent = (meetData.startDate || '').substring(0, 10);
+        }
+
+        // 特殊处理详情文本（保留换行）
+        if (detail) {
+            const cleanedDetail = cleanDescriptionText(meetData.detail || defaults.detail);
+            detail.innerHTML = cleanedDetail;
         }
 
         // 封面图片设置（主图和背景同步）
