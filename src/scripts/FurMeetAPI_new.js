@@ -6,7 +6,7 @@
     ** 能撑一点是一点（悲）
 */
 
-// 配置常量 - 更清晰的命名和分组
+// 配置常量 - 更清晰地命名和分组
 const FURMEET_API_CONFIG = {
     MAX_DISPLAY_MEETS: 6,
     API_ENDPOINT: 'https://api.furrycons.cn/event/recent',
@@ -75,7 +75,7 @@ const errorHandler = {
     }
 };
 
-// 预加载卡片元素 - 更清晰的初始化逻辑
+// 预加载卡片元素 - 更清晰地初始化逻辑
 function initializeMeetContainers() {
     const containers = [];
     for (let i = 1; i <= FURMEET_API_CONFIG.MAX_DISPLAY_MEETS; i++) {
@@ -104,7 +104,7 @@ function cleanDescriptionText(text) {
 
     // 去除中括号标记（【】和[]）
     cleaned = cleaned.replace(/【[^】]*】/g, '')
-        .replace(/\[[^\]]*\]/g, '');
+        .replace(/\[[^\]]*]/g, '');
 
     // 将连续多个换行符缩减为一个换行符
     cleaned = cleaned.replace(/\n{2,}/g, '\n');
@@ -133,8 +133,7 @@ const cardManager = {
 
         // 特殊处理详情文本（保留换行）
         if (detail) {
-            const cleanedDetail = cleanDescriptionText(meetData.detail || defaults.detail);
-            detail.innerHTML = cleanedDetail;
+            detail.innerHTML = cleanDescriptionText(meetData.detail || defaults.detail);
         }
 
         // 封面图片设置（主图和背景同步）

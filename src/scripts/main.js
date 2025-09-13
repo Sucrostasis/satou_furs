@@ -1,3 +1,5 @@
+// noinspection JSDeprecatedSymbols
+
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.NavLinks');
@@ -14,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let lastScroll = 0;
     const nav = document.querySelector('.FursNav');
     window.addEventListener('scroll', () => {
+        // noinspection JSDeprecatedSymbols
         const currentScroll = window.pageYOffset;
         if (currentScroll > lastScroll && currentScroll > 100) {
             nav.classList.add('scroll-hide');
