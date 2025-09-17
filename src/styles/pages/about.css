@@ -141,18 +141,63 @@
     box-shadow: 0 10px 25px rgba(94, 55, 25, 0.2);
 }
 
-.member-avatar {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+/*.member-avatar {*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));*/
+/*    margin: 0 auto 20px;*/
+/*    border-radius: 50%;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    color: white;*/
+/*    font-size: 2rem;*/
+/*    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);*/
+/*}*/
+
+.team-member .member-avatar {
+    width: 120px;
+    height: 120px;
     margin: 0 auto 20px;
     border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);
+    position: relative;
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    transition: all 0.3s ease;
+}
+
+.team-member .member-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.team-member:hover .member-avatar {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+}
+
+.team-member:hover .member-avatar img {
+    transform: scale(1.1);
+}
+
+.member-avatar .default-avatar {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
     color: white;
-    font-size: 2rem;
-    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);
+    font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    .team-member .member-avatar {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 .member-name {
