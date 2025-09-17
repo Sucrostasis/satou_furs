@@ -7,6 +7,7 @@
     <title> 加入我们 - FURS 兽研会 </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/pages/join.css">
     <link rel="icon" href="../../resource/assets_furs/logo.ico">
     <style>
         #bili-radio {
@@ -50,8 +51,17 @@
                 allowfullscreen>
         </iframe>
         <div class="hero-buttons">
-            <!--suppress HtmlUnknownAnchorTarget -->
-            <a href="#qq群 " class="cta-button">加入群聊</a>
+            <a href="#" id="join-qq-group" class="cta-button">加入群聊</a>
+        </div>
+    </div>
+
+    <div class="modal" id="qqGroupModal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="modal-title">加入FURS兽研会QQ群</h2>
+
+            <p class="modal-text">扫描二维码加入我们的QQ群，与更多兽迷交流！</p>
+            <img src="../../resource/intention-group/yixiang-QR.jpg" alt="FURS 兽研会" class=".qq-group-img">
         </div>
     </div>
 
@@ -92,6 +102,29 @@
         <p class="CopyRightInfor">&copy; 2025 FURS兽研会. 保留所有权利. | 兽迷文化，创意无限</p>
     </footer>
     <script src="../scripts/main.js"></script>
+    <script>
+        const joinButton = document.getElementById('join-qq-group');
+        const modal = document.getElementById('qqGroupModal');
+        const closeButton = document.querySelector('.modal-close');
+
+        joinButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'
+        });
+
+        closeButton.addEventListener('click', function() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
     <script>
         document.getElementById("bili-radio").style.height = document.getElementById("bili-radio").scrollWidth * 0.76 + "px";
     </script>
