@@ -71,10 +71,10 @@ class ThemeSwitcher {
         const container = document.createElement("div");
         container.className = "theme-switcher";
         container.innerHTML = `
-            <div class="theme-icon">⚪</div>
+            <div class="theme-icon"></div>
             <div class="theme-menu">
-                <div class="theme-option" data-theme="light">🌞 日间模式</div>
-                <div class="theme-option" data-theme="dark">🌙 夜间模式</div>
+                <div class="theme-option" data-theme="light">日间模式</div>
+                <div class="theme-option" data-theme="dark"> 夜间模式</div>
             </div>
         `;
         document.body.appendChild(container);

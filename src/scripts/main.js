@@ -1,13 +1,13 @@
 // noinspection JSDeprecatedSymbols
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.NavLinks');
-    hamburger.addEventListener('click', function() {
+    hamburger.addEventListener('click', function () {
         this.classList.toggle('active');
         navLinks.classList.toggle('active');
     });
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         if (!e.target.closest('.hamburger') && !e.target.closest('.NavLinks')) {
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
